@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salesmanapp/constants/app_colors.dart';
 import 'package:salesmanapp/widgets/text_widget.dart';
+import 'package:salesmanapp/widgets/textform_widget.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
@@ -13,9 +15,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whitecolor,
+      backgroundColor: AppColors.backgroundDark,
       appBar: AppBar(
-        backgroundColor: AppColors.whitecolor,
+        backgroundColor: AppColors.backgroundDark,
         title:Text("New Order"),
       ),
       body: Column(
@@ -25,16 +27,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(
-                 height: 100,
-                width: 300,
-                child: TextFormField(
-                  decoration: InputDecoration(hintText: "Search customer"),
-                ),
+                 height: 46.h,
+                width: 300.w,
+                child: TextformFieldWidget(hintText: "Search Customer",),
               ),
               Container(
                 height: 50,
                 width: 50,
-                decoration: BoxDecoration(),
+                decoration: BoxDecoration(
+                  color: AppColors.whitecolor
+                ),
                 child: IconButton(onPressed: () {}, icon: Icon(Icons.add)),
               )
             ],
