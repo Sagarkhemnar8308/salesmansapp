@@ -114,7 +114,7 @@ class _TextformFieldWidgetState extends State<TextformFieldWidget> {
                     // Use the errorTextColor property for error text color
                     color: widget.errorTextColor ?? Colors.red,
                     fontSize: widget.errorTextSize ?? 13.sp),
-                enabledBorder: UnderlineInputBorder(
+                enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(widget.rouneded),
                     borderSide: BorderSide(
                         width: 1.w,
@@ -122,7 +122,7 @@ class _TextformFieldWidgetState extends State<TextformFieldWidget> {
                             ? AppColors.borderColor
                             : AppColors.backgroundDark)),
                 focusedBorder: widget.isRounded
-                    ? UnderlineInputBorder(
+                    ? OutlineInputBorder(
                         borderRadius: BorderRadius.circular(widget.rouneded),
                         borderSide: BorderSide(
                             width: 1.w,
@@ -131,7 +131,7 @@ class _TextformFieldWidgetState extends State<TextformFieldWidget> {
                                 : AppColors.backgroundDark))
                     : null,
                 border: widget.isRounded
-                    ? UnderlineInputBorder(
+                    ? OutlineInputBorder(
                         borderRadius: BorderRadius.circular(widget.rouneded),
                         borderSide: BorderSide(
                             width: 1.w,
